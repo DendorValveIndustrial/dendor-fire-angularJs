@@ -1,0 +1,94 @@
+!!! 5
+%html{:lang => 'pl'}
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
+    %title= @title || "Dendor Valve Industrial"
+    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
+    %meta{:name=>'description', :content=>"Armatura przemysłowa Dendor Valve Industrial" }/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    = stylesheet_link_tag "bootstrap-response", :media=>"screen, projection"
+    = stylesheet_link_tag "home", :media=>"screen, projection"
+    =# stylesheet_link_tag "print", :media=>"print"
+    /[if IE]
+      %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+      = stylesheet_link_tag "ie", :media=>"all"
+  %body
+    .layout
+      .header{:role=>"banner"}
+        .navbar.navbar-inverse.navbar-fixed-top{:role=>"navigation"}
+          .navbar-inner
+            .container
+              =link_to("Dendor Valve", "/", :class=>"brand span2")
+              %button.btn.btn-navbar{"data-toggle"=>"collapse", "data-target"=>".nav-collapse"}
+                - 3.times do
+                  %span.icon-bar
+              .nav-collapse.collapse
+                %ul.nav
+                  /%li=link_to("O firme","/about.html")
+                  %li=link_to("Oferta","/productions/")
+                  %li=link_to("Aktualności","/news.html")
+                  %li=link_to("Info","/info.html")
+                  %li=link_to("Kontakt","/contact.html")
+                %ul.nav.pull-right.country
+                  %li=link_to(image_tag('icons/us.gif', :width=>"16", :height=>"11", :alt=>"U.S."), "http://dendor-valve.com", :title=>"U.S.")
+                  %li=link_to(image_tag('icons/pl.gif', :width=>"16", :height=>"11", :alt=>"Poland"), "http://dendor.pl", :title=>"Poland")
+                  %li=link_to(image_tag('icons/ru.gif', :width=>"16", :height=>"11", :alt=>"Русский"), "http://dendor.ru", :title=>"Русский")
+        .container
+          .row.head
+            .span3
+              .logo= image_tag('logo/logo-wite270.png', :width=>"269", :height=>"82", :alt=>"Dendor Valve")
+              .contact-top.text-center{:role=>"contentinfo"}
+                .address
+                  ul. Romualda Traugutta 29,
+                  %br/
+                  80-229, Gdańsk, Polska
+                .tel 48-792-516-591
+                .email
+                  %i.icon-envelope.icon-white
+                  = mail_to "info@dendor.pl"
+            .span9
+              .wrap-slider
+                %h1.pull-left Armatura przemysłowa
+                .pull-right.img-slider= image_tag("slide1.png", :width=>"245", :height=>"395", :alt=>"Armatura przemysłowa")
+                = render :partial => "/layouts/slider"
+      .main
+        .container
+          .row
+            .span3
+              .aside-sidebar
+                %ul.nav.nav-list{:role=>"navigation"}
+                  %li.nav-header Kategorie produktów
+                  %li= link_to "Przepustnice","productions/#!/butterfly-valves"
+                  %li= link_to "Zasuwy","productions/#!/cast-iron-valves"
+                  %li= link_to "Zawory zwrotne","productions/#!/check-valves"
+                  %li= link_to "Zawory elektromagnetyczne","productions/#!/solenoid-valves"
+                  %li= link_to "Zawory bezpieczeństwa","productions/#!/safety-valves"
+                  %li= link_to "Filtry","productions/#!/filters"
+                  %li= link_to "Kurki kulowe","productions/#!/ball-valves"
+                  %li= link_to "Napędy elektryczne","productions/#!/actuators"
+                  %li= link_to "Kompensatory","productions/#!/сompensators"
+                  %li= link_to "Akcesoria","productions/#!/accessories"
+            .span9
+              .row-fluid
+                .span10.offset1
+                  .home-title
+                    = yield
+              .line.line-dotted
+              .row-fluid
+                .span4
+                  %h2.h2 Jakość Produktów
+                  %p Dendor Valve Industrial zawsze troszczy się o jakość swoich produktów i potrzeby Klientów dążąc do świadczenia jak najlepszej jakości usług dla naszych wszystkich Kontrahentów.
+                .span4
+                  %h2.h2 Kontrola Jakości
+                  %p Dendor Valve Industrial zapewnia możliwość kontroli jakości wszystkich procesów produkcyjnych i gwarantuje ich  jakość sprawdzając na najnowszej generacji aparaturze badawczo-kontrolnej.
+                .span4
+                  %h2.h2 Zastosowanie Techniczne
+                  %p Dendor Valve Industrial nie ogranicza się tylko do projektowania i wytwarzania standardowych elementów,  ale również pomaga i doradza znalezienie prawidłowych rozwiązań w Państwa branży.
+      .layout-footer
+    .footer{:role=>"contentinfo"}
+      .container
+        .row
+          = render :partial => "/layouts/footer"
+    = javascript_include_tag "/lib/headjs/head.min"
+    = render :partial => "/layouts/headjs_home"
+    = render :partial => "/layouts/google_analytics"

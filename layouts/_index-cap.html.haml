@@ -1,0 +1,40 @@
+!!! 5
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}/
+    %title= @title || "Dendor Valve Industrial"
+    %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    = stylesheet_link_tag "bootstrap-styles", :media=>"screen, projection"
+    = stylesheet_link_tag "cap", :media=>"screen, projection"
+    = stylesheet_link_tag "print", :media=>"print"
+    /[if IE]
+      = stylesheet_link_tag "ie", :media=>"all"
+  %body
+    %header.header
+      .container
+        .logo= image_tag('logo_big.png')
+        %h1.text-center Valves for water and pipe fittings
+    %main.main
+      .container.contacts
+        .row
+          .span4.text-center
+            = image_tag('icons/usa-icons.png', :class=>"img-circle img-polaroid")
+            %h2.h1 U.S. contacts
+            %p.lead 1-757-849-9960
+            %p 413 S. Lynnhaven Rd., Suites 104-106, Lynnhaven Commerce Park, Virginia Beach, VA 23452
+            %p= mail_to "dendor@dendor-valve.com"
+          .span4.text-center
+            = image_tag('icons/pl-icons.png', :class=>"img-circle img-polaroid")
+            %h2.h1 Contacts in Poland
+            %p.lead 48-792-516-591
+            %p 80229, Romualda Traugutta 29, Gdańsk, Polska
+            %br
+            %p= mail_to "info@dendor.pl"
+          .span4.text-center
+            = image_tag('icons/rus-icons.png', :class=>"img-circle img-polaroid")
+            %h2.h1 Contacts in Russia
+            %p.lead 7-812-640-3030
+            %p 192289, St. Petersburg, Carpathian str., House number 14, block 5 liter A
+            %p= mail_to "office@dendor.ru"
+    %footer.footer

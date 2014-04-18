@@ -1,0 +1,36 @@
+-@activeCatalog = "active"
+!!! 5
+%html{:lang => 'pl', "ng-app"=>"valvesApp"}
+  %head
+    %meta{:charset => 'utf-8'}/
+    %title= "Dendor Valve Catalog"
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}/
+    %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
+    = stylesheet_link_tag "screen", :media=>"screen, projection"
+    = stylesheet_link_tag "catalog", :media=>"screen, projection"
+    =# stylesheet_link_tag "print", :media=>"print"
+    /[if IE]
+      %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+      = stylesheet_link_tag "ie", :media=>"all"
+
+    = javascript_include_tag "/lib/headjs/head.min"
+
+  %body{:analytics=>""}
+    .layout
+      %header.header{:role=>"banner"}
+        = render :partial => "/layouts/top_header"
+        = render :partial => "/layouts/navbar"
+      %main.main
+        .container
+          .view-container
+            .view-frame.ng-cloak{"ng-view"=>"ng-view", "ng-cloak"=>"ng-cloak"}
+      .layout-footer
+    %footer.footer{:role=>"contentinfo"}
+      .container
+        .row
+          = render :partial => "/layouts/footer"
+    = render :partial => "/layouts/headjs_catalog"
+    = render :partial => "/layouts/google_analytics"

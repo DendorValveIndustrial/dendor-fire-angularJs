@@ -1,0 +1,98 @@
+@import "base";
+
+/* Group List */
+.main{
+  .view-container{
+    position: relative;
+  }
+  .main-content{
+    .text-item{
+      margin: 0 0 20px;
+      text-align: justify;
+    }
+    .catalog-group{
+      position: relative;
+      margin-bottom: 40px;
+      .group-head{
+        position: absolute;
+        min-width: 250px;
+        background-color: #136FA5;
+        border: 1px solid #0A5B8B;
+        color: #fff;
+        font: bold 0.85em/1.5 Arial,Helvetica,sans-serif;
+        left: 100px;
+        padding: 2px 5px;
+        text-transform: uppercase;
+        @include box-shadow(rgba(0, 0, 0, 0.5) 1px 1px 3px);
+      }
+      .group-image{
+        width: 120px;
+        background-color: #EBECEC;
+        border: 5px solid white;
+        margin: 0 0 5px 0;
+        overflow: hidden;
+        padding: 5px;
+        @include box-shadow(rgba(0, 0, 0, 0.5) 1px 1px 3px);
+        @include single-transition(all, 0.2s, ease-in-out, false);
+        &:hover{
+          @include box-shadow(rgba(0,0,0,0.3) 6px 6px 6px);
+        }
+        img{
+          max-width: inherit;
+        }
+      }
+      .group-items{
+        margin: 40px 0 0 20px;
+        .list-items{
+          >li{
+            margin-bottom: 5px;
+            >a{
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .group-item{
+      .details-item-top{
+        margin: 30px 0;
+      }
+      .item-image{
+        background-color: white;
+        border: 5px solid white;
+        padding: 10px;
+        &.img-hover{
+          @include single-transition(all, 0.2s, ease-in-out, false);
+          &:hover{
+            @include box-shadow(rgba(0,0,0,0.3) 6px 6px 6px);
+          }
+        }
+      }
+      .main-features-item{
+        margin-top: 10px;
+        p{
+          margin: 0;
+        }
+        .name-type{
+          font-weight: bold;
+          color: #393185;
+          font-size: 1.5em;
+          margin-top: 20px;
+        }
+      }
+      .nav-tabs{
+        >li{
+          >a{
+            font-weight: bold;
+            font-size: 13px;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

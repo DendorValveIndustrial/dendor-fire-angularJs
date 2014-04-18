@@ -1,0 +1,55 @@
+-@view = {:title=>"Info", :description=>"Info", :keywords=>"Info"}
+-@activeInfo = "active"
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li.active= @view[:title]
+.row
+  .span9.offset3
+    %h1.h1= @view[:title]
+.row
+  .span9.pull-right
+    .main-content
+      %section
+        %h2.h2= link_to "Zasada działania zaworów elektromagnetycznych", "/info/the-principle-of-operation-of-electromagnetic-valves.html"
+        %p Codziennie każdy z nas ma kontakt z armaturą instalacyjną, ale jej funkcjonowanie w większości przypadków jest dla nas niewidoczne. Udaje nam się jednak przejąć w pełni kontrolę na czymś, co wydaje się być niekontrolowane. W rozwiązywaniu takich zadań jak: regulowanie i sterowanie parą, wodą, powietrzem, cieczami żrącymi, gazami oraz innymi mediami odgrywa ona bardzo ważną rolę w naszym życiu...
+        %p.text-right= link_to "czytaj więcej...", "/info/the-principle-of-operation-of-electromagnetic-valves.html", :class=>"btn btn-link"
+      .line.line-dotted
+      %section
+        %h2.h2= link_to "Dobór armatury instalacyjnej", "/info/selection-of-pipe-fittings.html"
+        %p Dobór armatury instalacyjnej jest bardzo ważnym etapem opracowania projektu, ponieważ od jakości i właściwego jej wyboru zależy skuteczność i funkcjonalność sieci instalacyjnych. Czym zatem dokładnie jest armatura instalacyjna? Są to różne urządzenia i akcesoria, które pozwalają w sposób właściwy zorganizować przepływające czynniki robocze (ciecze lub gazy) stosowane w przemyśle lub gospodarce komunalnej...
+        %p.text-right= link_to "czytaj więcej...", "/info/selection-of-pipe-fittings.html", :class=>"btn btn-link"
+      .line.line-dotted
+      %section
+        %h2.h2= link_to "Zarys historyczny armatury instalacyjnej", "/info/pipe-and-fittings-historical-information.html"
+        %p Codziennie każdy z nas ma kontakt z armaturą instalacyjną, ale jej funkcjonowanie w większości przypadków jest dla nas niewidoczne. Udaje nam się jednak przejąć w pełni kontrolę na czymś, co wydaje się być niekontrolowane. W rozwiązywaniu takich zadań jak: regulowanie i sterowanie parą, wodą, powietrzem, cieczami żrącymi, gazami oraz innymi mediami odgrywa ona bardzo ważną rolę w naszym życiu...
+        %p.text-right= link_to "czytaj więcej...", "/info/pipe-and-fittings-historical-information.html", :class=>"btn btn-link"
+      .line.line-dotted
+      %section
+        %h2.h2= link_to "Typy kompensatorów", "/info/types-of-compensators.html"
+        %p Kompensatory przeznaczone są do przejmowania wszelkiego rodzaju przemieszczeń: osiowych, poprzecznych, kątowych i ich kombinacji. Oprócz tego izolują wibracje, tłumią hałas oraz pochłaniają energię uderzenia hydraulicznego. Obecnie na rynku armatury przemysłowej znajdują zastosowanie kilka typów kompensatorów. Różnice w budowie poszczególnych typów kompensatorów zależą od charakteru przepływającego charakteru czynnika roboczego...
+        %p.text-right= link_to "czytaj więcej...", "/info/types-of-compensators.html", :class=>"btn btn-link"
+      .line.line-dotted
+      %section
+        %h2.h2= link_to "Kurek kulowy", "/info/what-a-ball-valve.html"
+        %p Większości instalatorów słowo „kurek” kojarzy się z zaworem czerpalnym do zimnej wody usytuowanym nad zlewem lub zainstalowanym na końcu rurociągu z końcówką do węża do podlewania ogrodu. Jednak prawidłowa nazwa tej armatury powinna brzmieć „kurek kulowy”...
+        %p.text-right= link_to "czytaj więcej...", "/info/what-a-ball-valve.html", :class=>"btn btn-link"
+      .line.line-dotted
+      %section
+        %h2.h2= link_to "Przepustnice", "/info/types-of-butterfly-valves.html"
+        %p Przepustnice zwrotne stosowane są praktycznie w każdej branży gospodarki przemysłowej. Do ich produkcji używane jest stal węglowa i nierdzewna, żeliwo, tworzywo sztuczne. Spełniają one role armatury odcinającej i regulacyjnej w rurociągach transportujących płyny, gazy, powietrze, parę. Przepustnice są armaturą pozwalającą na swobodną regulację przepływu czynnika roboczego. Idealnie dopasowany dysk do pierścienia uszczelniającego gwarantuje wysoką szczelność...
+        %p.text-right= link_to "czytaj więcej...", "/info/types-of-butterfly-valves.html", :class=>"btn btn-link"
+      /.line.line-dotted
+
+  .span3.pull-left.left-bar.text-right
+    %ul.nav.nav-list
+      %li.nav-header= @view[:title]
+      %li= link_to "Zasada działania zaworów elektromagnetycznych", "/info/the-principle-of-operation-of-electromagnetic-valves.html"
+      %li= link_to "Dobór armatury instalacyjnej", "/info/selection-of-pipe-fittings.html"
+      %li= link_to "Zarys historyczny armatury instalacyjnej", "/info/pipe-and-fittings-historical-information.html"
+      %li= link_to "Typy kompensatorów", "/info/types-of-compensators.html"
+      %li= link_to "Kurek kulowy", "/info/what-a-ball-valve.html"
+      %li= link_to "Przepustnice", "/info/types-of-butterfly-valves.html"

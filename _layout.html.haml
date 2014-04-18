@@ -1,0 +1,34 @@
+!!!5
+%html{:lang => 'pl'}
+  %head
+    %meta{:charset => 'utf-8'}/
+    %title= @view[:title] || "Dendor Valve Industrial"
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}/
+    %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
+    %meta{:name=>'description', :content=>@view[:description] || "Dendor Valve Industrial" }/
+    %meta{:name=>'keywords', :content=>@view[:tags] || "Dendor Valve Industrial"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
+    = stylesheet_link_tag "screen", :media=>"screen, projection"
+    =# stylesheet_link_tag "print", :media=>"print"
+    /[if IE]
+      %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+      = stylesheet_link_tag "ie", :media=>"all"
+    = javascript_include_tag "/lib/headjs/head.min"
+  %body#root
+    .layout
+      %header.header
+        = render :partial => "/layouts/top_header"
+        = render :partial => "/layouts/navbar"
+      %main.main
+        .container
+          = yield
+      .layout-footer
+    %footer.footer
+      .container
+        .row
+          = render :partial => "/layouts/footer"
+  = render :partial => "/layouts/headjs"
+  = @scriptPage
+  = render :partial => "/layouts/google_analytics"

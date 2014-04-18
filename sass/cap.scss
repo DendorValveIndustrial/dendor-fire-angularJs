@@ -1,0 +1,73 @@
+@import "base";
+
+html,
+body{
+  height: 100%;
+}
+body{
+  background:{
+    image: image-url("body_bg.png");
+    position: top center;
+    repeat: no-repeat;
+  }
+  @media (max-width: 767px){
+    padding: 0;
+  }
+}
+.header{
+  height: 500px;
+  background:{
+    image: image-url("body_bg.png");
+    position: top center;
+    repeat: no-repeat;
+    color: #393185;
+  }
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0 5px 15px);
+  margin-bottom: 45px;
+  .logo{
+    position: relative;
+    height: 340px;
+    >img{
+      display: block;
+      position: absolute;
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+    @media (max-width: 767px){
+      height: 150px;
+    }
+  }
+  h1{
+    color: #aaa;
+    margin-top: 70px;
+    @include text-shadow(rgba(0,0,0,.4) 0 1px 1px);
+    @media (max-width: 767px){
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 767px){
+    height: 350px;
+    padding:{
+      left: 20px;
+      right: 20px;
+    }
+  }
+}
+.main{
+  .contacts{
+    .img-polaroid{
+      padding: 0;
+    }
+    h2{
+      font-weight: normal;
+    }
+    .span4{
+      @media (max-width: 767px){
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+.footer{}

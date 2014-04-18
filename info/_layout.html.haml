@@ -1,0 +1,56 @@
+-@activeInfo = "active"
+!!!5
+%html{:lang => 'pl'}
+  %head
+    %meta{:charset => 'utf-8'}/
+    %title= @view[:title] || "Dendor Valve Industrial"
+    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
+    %meta{:name=>'description', :content=>@view[:description] || "Dendor Valve Industrial" }/
+    %meta{:name=>'keywords', :content=>@view[:tags] || "Dendor Valve Industrial"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
+    = stylesheet_link_tag "screen", :media=>"screen, projection"
+    = stylesheet_link_tag "print", :media=>"print"
+    /[if IE]
+      %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+      = stylesheet_link_tag "ie", :media=>"all"
+    = render :partial => "/layouts/scripts"
+  %body#root
+    .layout
+      %header.header
+        = render :partial => "/layouts/top_header"
+        = render :partial => "/layouts/navbar"
+      %main.main
+        .container
+          .row
+            .span12
+              %ul.breadcrumb
+                %li
+                  =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+                  %span.divider="/"
+                %li
+                  =link_to("Info", "/info.html", :title=>"Info")
+                  %span.divider="/"
+                %li.active= @view[:title]
+          .row
+            .span9.offset3
+              %h1.h1= @view[:title]
+          .row
+            .span9.pull-right
+              .main-content
+                .text-item
+                  = yield
+            .span3.pull-left.left-bar.text-right
+              %ul.nav.nav-list
+                %li.nav-header Info
+                %li= link_to "Zasada działania zaworów elektromagnetycznych", "the-principle-of-operation-of-electromagnetic-valves.html"
+                %li= link_to "Dobór armatury instalacyjnej", "selection-of-pipe-fittings.html"
+                %li= link_to "Zarys historyczny armatury instalacyjnej", "pipe-and-fittings-historical-information.html"
+                %li= link_to "Typy kompensatorów", "types-of-compensators.html"
+                %li= link_to "Kurek kulowy", "what-a-ball-valve.html"
+                %li= link_to "Przepustnice", "types-of-butterfly-valves.html"
+      .layout-footer
+    %footer.footer
+      .container
+        .row
+          = render :partial => "/layouts/footer"

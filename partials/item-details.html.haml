@@ -1,0 +1,98 @@
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li
+        =link_to("Oferta", "/productions/", :title=>"Oferta")
+        %span.divider="/"
+      %li
+        =link_to("{{group.name}}", "#!/{{group.path}}", :title=>"{{group.name}}")
+        %span.divider="/"
+      %li.active {{item.itemName}}
+.row
+  .span9.offset3
+    %h1.h1 {{item.itemName}}
+.row
+  .span9.pull-right
+    .main-content
+      %section.group-item
+        .row-fluid.details-item-top
+          .span4
+            .item-image.text-center
+              %img{"ng-src"=>"{{item.imageUrl}}"}
+          .span7.offset1
+            .main-features-item
+              %p{"ng-hide"=>"!item.property.dn"}
+                Zakres średnic:
+                %strong {{item.property.dn}}
+              %p{"ng-hide"=>"!item.property.pn"}
+                Ciśnienia pracy:
+                %strong {{item.property.pn}}
+              %p{"ng-hide"=>"!item.property.tRab"}
+                Zakres temperatury:
+                %strong {{item.property.tRab}}
+              %p{"ng-hide"=>"!item.property.tMax"}
+                max.t:
+                %strong {{item.property.tMax}}
+              %p.name-type{"ng-hide"=>"!item.itemType"} Typ {{item.itemType}}
+        %tabset{:justified=>"true"}
+          %tab{:heading=>"Dane techniczne"}
+            .item-property{"ng-hide"=>"!item.use"}
+              %h3.h3 Zastosowanie
+              %ul
+                %li {{item.use}}
+            .item-property{"ng-hide"=>"!item.materials"}
+              %h3.h3 Wykonanie Materiałowe
+              %ul
+                %li{"ng-repeat"=>"material in item.materials"}
+                  %em{"ng-hide"=>"!material.name"} {{material.name}} -
+                  %span {{material.value}}
+            .item-property{"ng-hide"=>"!item.corrosion"}
+              %h3.h3 Ochrona przed korozją - zabezpieczenie
+              %ul
+                %li{"ng-repeat"=>"corrosion in item.corrosion"}
+                  {{corrosion}}
+            .item-property{"ng-hide"=>"!item.environment"}
+              %h3.h3 Media
+              %ul
+                %li {{item.environment}}
+            .item-property{"ng-hide"=>"!item.connection"}
+              %h3.h3 Przyłącze
+              %ul
+                %li{"ng-repeat"=>"connection in item.connection"}
+                  {{connection}}
+            .item-property{"ng-hide"=>"!item.performance"}
+              %h3.h3 Wykonanie – typ wykonania
+              %ul
+                %li{"ng-repeat"=>"performance in item.performance"}
+                  {{performance}}
+            .item-property{"ng-hide"=>"!item.power"}
+              %h3.h3 Zasilanie
+              %ul
+                %li{"ng-repeat"=>"power in item.power"}
+                  {{power}}
+          %tab{"ng-hide"=>"!item.description", :heading=>"Opis"}
+            .item-property
+              %p{"ng-repeat"=>"description in item.description", "ng-bind-html"=>"description"}
+            .item-property{"ng-bind-html"=>"item.html", "ng-hide"=>"!item.html"}
+          %tab{"ng-hide"=>"!item.design", :heading=>"Budowa"}
+            .item-property
+              %table{:class=>"table table-bordered table-condensed table-hover"}
+                %tr{"ng-repeat"=>"design in item.design"}
+                  %td {{$index+1}}
+                  %td {{design.name}}
+                  %td {{design.value}}
+          %tab{"ng-hide"=>"!item.construction", :heading=>"Budowa"}
+            .item-property
+              %ul
+                %li{"ng-repeat"=>"construction in item.construction"}
+                  {{construction}}
+
+  .span3.pull-left.left-bar.text-right
+    %ul.nav.nav-list
+      %li.nav-header {{group.name}}
+      %li{"ng-repeat"=>"item in group.groupItems", "ng-class"=>"{'disabled':isActive(item.itemId)}"}
+        =link_to("{{item.itemName}}","#!/{{group.path}}/{{item.itemId}}")
+        .divider

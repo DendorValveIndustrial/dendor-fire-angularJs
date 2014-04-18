@@ -1,0 +1,45 @@
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li.active Oferta
+.row
+  .span9.offset3
+    %h1.h1 Armatura Przemysłowa marki Dendor Valve Industrial
+.row
+  .span9.pull-right
+    .main-content
+      .text-item
+        %p Dendor Valve Industrial  dostarcza swoim Klientom produkty tylko najwyższej jakości. Oferujemy armaturę na różnego rodzaju media: wodę, parę wodną, olej, inne niepalne i chemicznie nieagresywne substancje, substancje żrące, substancje neutralne ciekłe i gazowe, kwasy, ługi, wodę morską, amoniak, czynniki aktywne chemicznie, produkty rafinacji ropy naftowej (benzyna, nafta, olej opałowy), paliwo dieslowskie, wodę amoniakalną zawierającą związki amonowe, smołę, benzol, fenole, zasady pirydynowe, zanieczyszczenia stałe.
+        %p Na nasz bogaty asortyment składają się takie elementy jak:
+        %ul
+          %li przepustnice zwrotne
+          %li zasuwy (klinowe, nożowe)
+          %li zawory zwrotne (kołnierzowe, międzykołnierzowe)
+          %li zawory elektromagnetyczne
+          %li zawory bezpieczeństwa
+          %li filtry kołnierzowe, siatkowe
+          %li kurki kulowe
+          %li napędy elektryczne
+          %li kompensatory
+          %li akcesoria
+          %li kształtki
+        %p Oferowane przez nas urządzenia wyróżniają się najwyższą klasą, niezawodnością, a także oszczędnością energii i właściwościami chroniącymi środowisko.
+        %p Zapraszamy Państwa do nawiązania współpracy. To właśnie dzięki naszemu doświadczeniu i zorientowaniu na Klienta będą Państwo mogli zaopatrzyć się w najlepsze produkty.
+      %section.catalog-group.span9{"ng-repeat"=>"group in groups | orderBy:orderProp"}
+        %h2.group-head {{group.name}}
+        .group-image.pull-left
+          %a{:href=>"#!/{{group.id}}"}
+            %img{"ng-src"=>"{{group.image}}"}
+        .group-items.pull-left
+          %ul.list-items.checkarrow
+            %li{"ng-repeat"=>"item in group.groupItems"}
+              =link_to("{{item.itemName}}","#!/{{group.id}}/{{item.itemId}}")
+  .span3.pull-left.left-bar.text-right
+    %ul.nav.nav-list
+      %li.nav-header Produkty
+      %li{"ng-repeat"=>"group in groups | orderBy:orderProp"}
+        =link_to("{{group.name}}","#!/{{group.id}}")
+

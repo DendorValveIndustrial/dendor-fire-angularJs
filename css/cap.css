@@ -1,0 +1,39 @@
+.h1 { color: #9D9D00; font-size: 24px; font-weight: normal; margin: 0 0 10px; }
+
+.h2 { font-size: 18px; font-weight: normal; line-height: inherit; margin-bottom: 15px; margin-top: 0; text-transform: none; }
+.h2 > a { text-decoration: none; color: #004480; }
+.h2 > a:visited { color: #004480; }
+.h2 > a:focus { color: #004480; }
+.h2 > a:hover { color: #005fb3; }
+.h2 > a:active { color: #004480; }
+
+.h3 { font-size: 15px; text-transform: uppercase; line-height: 40px; }
+
+ul.checkarrow { list-style-image: url('data:image/gif;base64,R0lGODlhCAAJAIABAGZmZv///yH5BAEAAAEALAAAAAAIAAkAAAIPjGF5uOD8Yoi0TqpunqoAADs='); }
+
+.line { height: 1px; margin: 25px auto; overflow: hidden; }
+
+.line-dotted { border-bottom: 1px dotted #524E4E; border-top: 0; }
+
+legend { color: inherit; }
+
+textarea { resize: vertical; }
+
+.navbar-search .search-query { line-height: normal; }
+
+html, body { height: 100%; }
+
+body { background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; }
+@media (max-width: 767px) { body { padding: 0; } }
+
+.header { height: 500px; background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; background-color: #393185; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; margin-bottom: 45px; }
+.header .logo { position: relative; height: 340px; }
+.header .logo > img { display: block; position: absolute; margin: 0 auto; right: 0; left: 0; bottom: 0; }
+@media (max-width: 767px) { .header .logo { height: 150px; } }
+.header h1 { color: #aaa; margin-top: 70px; text-shadow: rgba(0, 0, 0, 0.4) 0 1px 1px; }
+@media (max-width: 767px) { .header h1 { margin-top: 50px; } }
+@media (max-width: 767px) { .header { height: 350px; padding-left: 20px; padding-right: 20px; } }
+
+.main .contacts .img-polaroid { padding: 0; }
+.main .contacts h2 { font-weight: normal; }
+@media (max-width: 767px) { .main .contacts .span4 { margin-bottom: 20px; } }

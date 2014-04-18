@@ -1,0 +1,47 @@
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li
+        =link_to("Oferta", "/productions/", :title=>"Oferta")
+        %span.divider="/"
+      %li.active {{group.name}}
+.row
+  .span9.offset3
+    %h1.h1 {{group.name}}
+.row
+  .span9.pull-right
+    .main-content
+      .text-item {{group.description}}
+      .line.line-dotted
+      %section.group-item{"ng-repeat"=>"item in group.groupItems"}
+        %h2.h2=link_to("{{item.itemName}} {{item.itemType}}","#/{{group.path}}/{{item.itemId}}")
+        .row-fluid
+          .span4
+            .item-image.img-hover.text-center
+              %a{:href=>"#!/{{group.path}}/{{item.itemId}}"}
+                %img{"ng-src"=>"{{item.imageUrl}}"}
+          .span7.offset1
+            .main-features-item
+              %p
+                Zakres średnic:
+                %strong {{item.property.dn}}
+              %p{"ng-hide"=>"!item.property.pn"}
+                Ciśnienia pracy:
+                %strong {{item.property.pn}}
+              %p{"ng-hide"=>"!item.property.tRab"}
+                Zakres temperatury:
+                %strong {{item.property.tRab}}
+              %p{"ng-hide"=>"!item.property.tMax"}
+                max.t:
+                %strong {{item.property.tMax}}
+              %p.name-type{"ng-hide"=>"!item.itemType"} Typ {{item.itemType}}
+        .line.line-dotted
+  .span3.pull-left.left-bar.text-right
+    %ul.nav.nav-list
+      %li.nav-header Produkcja
+      %li{"ng-repeat"=>"groupItem in groupList | orderBy:orderProp", "ng-class"=>"{'disabled':isActive(groupItem.id)}"}
+        =link_to("{{groupItem.name}}","#!/{{groupItem.id}}")
+        /.divider

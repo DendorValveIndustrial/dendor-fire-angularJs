@@ -1,0 +1,106 @@
+-@view = {:title => "Kontakt", :description => "Kontakt", :tags => "Kontakt"}
+-@activeContact = "active"
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li.active= @view[:title]
+.row
+  .span7.offset5
+    %h1.h1= @view[:title]
+.row
+  .span4
+    .contact-form
+      %form#contactForm{:method=>"post", :action=>"/feedback/assets/php/send.php"}
+        %fieldset
+          %legend Formularz Kontaktowy
+          .error#error Wiadomość nie może być wysłana z powodu błędu.!
+          .success#success
+            Wiadomość została wysłana pomyślnie!
+            %br/
+            Dziękujemy za kontakt.
+
+          %label.required Imię i nazwisko
+          %input#name{:type=>"text", :placeholder=>"Imię i nazwisko…", :required=>"required", :class=>"span4", :name=>"name"}
+          .warning#nameError To pole musi być wypełnione
+
+          %label.required E-mail
+          %input#email{:type=>"email", :placeholder=>"E-mail…", :required=>"required", :class=>"span4", :name=>"email"}
+          .warning#emailError Wprowadź ważny adres mailowy!
+
+          %label.required Numer telefonu
+          %input#phone{:type=>"tel", :placeholder=>"Numer telefonu…", :required=>"required", :class=>"span4", :name=>"phone"}
+          .warning#phoneError Tylko cyfry!
+
+          %label Temat
+          %select#sales{:name=>"sales", :class=>"span4"}
+            %option{:value=>"Sales"}= "Sprzedaż"
+            %option{:value=>"Support"}= "Wsparcie"
+            %option{:value=>"Other"}= "Pozostałe"
+
+          %label.required Wiadomość
+          %textarea#message{:placeholder=>"Wiadomość…", :required=>"required", :class=>"span4", :rows=>"6", :name=>"message"}
+          .warning#messageError To pole musi być wypełnione
+
+          .captcha
+            %label.required Wprowadź znaki przedstawione na obrazku
+            %input#security_code{:type=>"text", :required=>"required", :class=>"input-small", :name=>"security_code"}
+            = image_tag("/feedback/assets/php/security/1/sec.php")
+            .warning#security_code Kod dostępu jest błędny!
+
+          %p#ajax_loader{:class=>"text-center", :style=>"display: none;"}
+            = image_tag("/feedback/assets/img/contact/ajax-loader.gif")
+          %button#send{:type=>"submit", :class=>"btn"} Wyślij
+  .span7.offset1
+    .main-content
+      %section.contact
+        %h2.h2.line-dotted Polska
+        %dl.dl-horizontal
+          %dt Adres:
+          %dd
+            ul. Romualda Traugutta 29,
+            %br/
+            80-229 Gdańsk
+          %dt tel:
+          %dd +48-792-516-591
+          %dt fax:
+          %dd +48-583-477-788
+          %dt e-mail:
+          %dd= mail_to "info@dendor.pl"
+          %dt http:
+          %dd= link_to "dendor.pl", "http://dendor.pl"
+      %section.contact
+        %h2.h2.line-dotted Россия
+        %dl.dl-horizontal
+          %dt Adres:
+          %dd
+            192289, St. Petersburg, Carpathian str.,
+            %br/
+            House number 14, block 5 liter A
+          %dt tel:
+          %dd +7-812-640-3030
+          %dt fax:
+          %dd +7-812-640-3030
+          %dt e-mail:
+          %dd= mail_to "office@dendor.ru"
+          %dt http:
+          %dd= link_to "dendor.ru", "http://dendor.ru"
+      %section.contact
+        %h2.h2.line-dotted U.S. contacts
+        %dl.dl-horizontal
+          %dt Adres:
+          %dd
+            413 S. Lynnhaven Rd., Suites 104-106,
+            %br/
+            Lynnhaven Commerce Park, Virginia Beach,
+            %br/
+            VA 23452
+          %dt tel:
+          %dd +1-757-849-9960
+          %dt e-mail:
+          %dd= mail_to "dendor@dendor-valve.com"
+          %dt http:
+          %dd= link_to "dendor-valve.com", "http://dendor-valve.com"
+

@@ -1,0 +1,13 @@
+.navbar.navbar-inverse.navbar-static-top{:role=>"navigation"}
+  .navbar-inner
+    .container
+      .nav-collapse.collapse
+        %ul.nav
+          %li=link_to("Główna","/")
+          /%li{:class=>@activeAbout}=link_to("O firme","/about.html")
+          %li{:class=>@activeCatalog}=link_to("Oferta","/productions/")
+          %li{:class=>@activeNews}=link_to("Aktualności","/news.html")
+          %li{:class=>@activeInfo}=link_to("Info","/info.html")
+          %li{:class=>@activeContact}=link_to("Kontakt","/contact.html")
+        %form.navbar-search.pull-right{:metod=>"get", :action=>"/search.html"}
+          %input{:type=>"text", :class=>"search-query", :placeholder=>"Search", :name=>"q"}

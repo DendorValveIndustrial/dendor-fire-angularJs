@@ -1,0 +1,26 @@
+-@view = {:title=>"Search", :description=>"Search", :keywords=>"Search"}
+-@scriptPage = "<script>(function() {var cx = '002321161471768174809:2gxw9iecfem'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();var noQuery = document.getElementById('no-query'); noQuery.style.display = (window.location.search != '')?'none':'block';</script>"
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li.active= @view[:title]
+.row
+  .span9.offset3
+    %h1.h1= @view[:title]
+.row
+  .span9.pull-right
+    .main-content
+      %p#no-query Enter your search query in the search form.
+      %div= "<gcse:searchresults-only></gcse:searchresults-only>"
+  .span3.pull-left.left-bar.text-right
+    %ul.nav.nav-list
+      %li.nav-header Search form
+      %li
+        %form.form-search{:metod=>"get", :action=>"/search.html"}
+          .input-append
+            %input{:type=>"text", :class=>"span2 search-query", :placeholder=>"Enter search query", :name=>"q"}
+            %button{:type=>"submit", :class=>"btn"}
+              %i{:class=>"icon-search"}

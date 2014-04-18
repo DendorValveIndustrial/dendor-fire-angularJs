@@ -1,0 +1,119 @@
+@import "compass/utilities";
+@import "compass/layout";
+@import "compass/css3";
+
+$arrow-sprite: sprite-map("arrow-slider/*.png", $position: 100%, $spacing: 5px, $repeat: no-repeat);
+
+@mixin red-box($all-children: false){
+  @if $all-children {
+    &, div {
+      @include box-shadow(#f00 0 0 1px inset);
+    }
+  }
+  @else{
+    >div {
+      @include box-shadow(#f00 0 0 1px inset);
+    }
+  }
+}
+
+@mixin img-polaroid-light($padding: 8px){
+  padding: $padding;
+  background-color: #fff;
+  @include box-shadow(rgba(0,0,0, 0.2) 5px 5px 5px, rgba(0, 0, 0, 0.3) 0px 0px 2px);
+}
+
+@mixin justified-grid($wrap-width: 100%, $item-width: 32%){
+  width: $wrap-width;
+  text-align: justify;
+  font-size: 0;
+  font-size: 12px\9; /* IE6-9 only fix */
+  > div{
+    width: $item-width;
+    display: inline-block;
+    font-size: initial;
+    text-align: center;
+    zoom: 1;
+    *display: inline; /* IE stuff again */
+  }
+  &:after{
+    content: "";
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+@mixin bottom-footer($body: unquote("#root"), $content: unquote("#root-content")){
+  #{$body}{
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  #{$content}{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-preferred-size: auto;
+  }
+}
+
+.h1 {
+  color: #9D9D00;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+.h2 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: inherit;
+  margin-bottom: 15px;
+  margin-top: 0;
+  text-transform: none;
+  > a{
+    text-decoration: none;
+    @include link-colors(#004480, lighten(#004480, 10%), #004480, #004480, #004480);
+  }
+}
+.h3 {
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+ul.checkarrow{
+  list-style-image: inline-image("icons/icon-arrow.gif");
+}
+.line{
+  height: 1px;
+  margin: 25px auto;
+  overflow: hidden;
+}
+.line-dotted{
+  border-bottom: 1px dotted #524E4E;
+  border-top: 0;
+}
+legend {
+  color: inherit;
+}
+textarea{
+  resize: vertical;
+}
+.navbar-search .search-query{
+  line-height: normal;
+}
