@@ -1,6 +1,7 @@
 .sass-cache/
 build_*/
 data/
+img/
 .htaccess
 fire_app_log.txt
 config.rb
