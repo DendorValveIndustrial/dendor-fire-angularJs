@@ -17,7 +17,7 @@
       .text-item {{group.description}}
       .line.line-dotted
       %section.group-item{"ng-repeat"=>"item in group.groupItems"}
-        %h2.h2=link_to("{{item.itemName}} {{item.itemType}}","#/{{group.path}}/{{item.itemId}}")
+        %h2.h2=link_to("{{item.itemName}} {{item.itemType}}","#!/{{group.path}}/{{item.itemId}}")
         .row-fluid
           .span4
             .item-image.img-hover.text-center
