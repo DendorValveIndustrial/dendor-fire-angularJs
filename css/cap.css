@@ -23,10 +23,10 @@ textarea { resize: vertical; }
 
 html, body { height: 100%; }
 
-body { background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; }
+body { background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; }
 @media (max-width: 767px) { body { padding: 0; } }
 
-.header { height: 500px; background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; background-color: #393185; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; margin-bottom: 45px; }
+.header { height: 500px; background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; background-color: #393185; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; margin-bottom: 45px; }
 .header .logo { position: relative; height: 340px; }
 .header .logo > img { display: block; position: absolute; margin: 0 auto; right: 0; left: 0; bottom: 0; }
 @media (max-width: 767px) { .header .logo { height: 150px; } }

@@ -28,7 +28,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 70px; }
 
-body { overflow-y: scroll; background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; }
+body { overflow-y: scroll; background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; }
 @media (max-width: 767px) { body { padding: 0; overflow-y: hidden; } }
 
 .header { margin-bottom: 10px; }
