@@ -1,17 +1,7 @@
 !!! 5
 %html{:lang => 'pl'}
   %head
-    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
-    %title= @title || "Dendor Valve Industrial"
-    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
-    %meta{:name=>'description', :content=>"Armatura przemysłowa Dendor Valve Industrial" }/
-    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
-    = stylesheet_link_tag "bootstrap-response", :media=>"screen, projection"
-    = stylesheet_link_tag "home", :media=>"screen, projection"
-    =# stylesheet_link_tag "print", :media=>"print"
-    /[if IE]
-      %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
-      = stylesheet_link_tag "ie", :media=>"all"
+    = render :partial => "/layouts/head"
   %body
     .layout
       .header{:role=>"banner"}
@@ -29,6 +19,7 @@
                   %li=link_to("Aktualności","/news.html")
                   %li=link_to("Info","/info.html")
                   %li=link_to("Kontakt","/contact.html")
+                  %li=link_to("Cennik","/price.pdf", :target=>"_blank")
                 %ul.nav.pull-right.country
                   %li=link_to(image_tag('icons/us.gif', :width=>"16", :height=>"11", :alt=>"U.S."), "http://dendor-valve.com", :title=>"U.S.")
                   %li=link_to(image_tag('icons/pl.gif', :width=>"16", :height=>"11", :alt=>"Poland"), "http://dendor.pl", :title=>"Poland")
@@ -39,9 +30,9 @@
               .logo= image_tag('logo/logo-wite270.png', :width=>"269", :height=>"82", :alt=>"Dendor Valve")
               .contact-top.text-center{:role=>"contentinfo"}
                 .address
-                  ul. Romualda Traugutta 29,
+                  ul. Romualda Traugutta 29
                   %br/
-                  80-221, Gdańsk, Polska
+                  80-221 Gdańsk, Polska
                 .tel 48-792-516-591
                 .email
                   %i.icon-envelope.icon-white

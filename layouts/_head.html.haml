@@ -1,0 +1,34 @@
+%meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
+%title= @view[:title] || "Dendor Valve Industrial"
+%meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
+%meta{:name=>'description', :content=>@view[:description] }/
+%meta{:name=>'keywords', :content=>@view[:keywords] }/
+%link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+/Apple iOS
+%link{:rel=>"apple-touch-icon", :href=>"/img/favicons/touch-icon-iphone.png"}/
+%link{:rel=>"apple-touch-icon", :sizes=>"76x76", :href=>"/img/favicons/touch-icon-ipad.png"}/
+%link{:rel=>"apple-touch-icon", :sizes=>"120x120", :href=>"/img/favicons/touch-icon-iphone-retina.png"}/
+%link{:rel=>"apple-touch-icon", :sizes=>"156x156", :href=>"/img/favicons/touch-icon-ipad-retina.png"}/
+/facebook meta
+%meta{:property=>"og:url", :content=>"http://dendor.pl"}/
+%meta{:property=>"og:title", :content=>@view[:title] || "Dendor Valve Industrial"}/
+%meta{:property=>"og:type", :content=>"website"}/
+%meta{:property=>"og:site_name", :content=>"Dendor"}/
+%meta{:property=>"og:image", :content=>"/img/logo/dendorLogo.png"}/
+%meta{:property=>"og:description", :content=>@view[:description]}/
+/win meta
+%meta{:name=>"application-name", :content=>"Dendor"}/
+%meta{:name=>"msapplication-TileImage", :content=>"/img/logo/dendorLogo.png"}/
+%meta{:name=>"msapplication-TileColor", :content=>"#393185"}/
+/twitter meta
+%meta{:name=>"twitter:card", :content=>"summary"}/
+%meta{:name=>"twitter:description", :content=>@view[:description]}/
+%meta{:name=>"twitter:site", :content=>"@Dendor"}/
+%meta{:name=>"twitter:title", :content=>@view[:title] || "Dendor Valve Industrial"}/
+%meta{:name=>"twitter:url", :content=>"http://dendor.pl"}/
+= stylesheet_link_tag "bootstrap-response", :media=>"screen, projection"
+= stylesheet_link_tag "home", :media=>"screen, projection"
+=# stylesheet_link_tag "print", :media=>"print"
+/[if IE]
+  %meta{'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1'}/
+  = stylesheet_link_tag "ie", :media=>"all"
