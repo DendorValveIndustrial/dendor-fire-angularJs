@@ -2,12 +2,7 @@
 !!!5
 %html{:lang => 'pl'}
   %head
-    %meta{:charset => 'utf-8'}/
-    %title= @view[:title] || "Dendor Valve Industrial"
-    %meta{:name=>"viewport", :content=>"width=device-width, initial-scale=1"}/
-    %meta{:name=>'description', :content=>@view[:description] || "Dendor Valve Industrial" }/
-    %meta{:name=>'keywords', :content=>@view[:tags] || "Dendor Valve Industrial"}/
-    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    = render :partial => "/layouts/head"
     = stylesheet_link_tag "bootstrap-no-response", :media=>"screen, projection"
     = stylesheet_link_tag "screen", :media=>"screen, projection"
     = stylesheet_link_tag "print", :media=>"print"
@@ -17,7 +12,7 @@
     = render :partial => "/layouts/scripts"
   %body#root
     .layout
-      %header.header
+      .header{:role=>"banner"}
         = render :partial => "/layouts/top_header"
         = render :partial => "/layouts/navbar"
       %main.main
@@ -50,7 +45,7 @@
                 %li= link_to "Kurek kulowy", "what-a-ball-valve.html"
                 %li= link_to "Przepustnice", "types-of-butterfly-valves.html"
       .layout-footer
-    %footer.footer
+    .footer{:role=>"contentinfo"}
       .container
         .row
           = render :partial => "/layouts/footer"
