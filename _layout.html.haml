@@ -10,14 +10,14 @@
     = javascript_include_tag "/lib/headjs/head.min"
   %body#root
     .layout
-      %header.header
+      .header{:role=>"banner"}
         = render :partial => "/layouts/top_header"
         = render :partial => "/layouts/navbar"
-      %main.main
+      .main
         .container
           = yield
       .layout-footer
-    %footer.footer
+    .footer{:role=>"contentinfo"}
       .container
         .row
           = render :partial => "/layouts/footer"
