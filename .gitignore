@@ -2,6 +2,7 @@
 build_*/
 data/
 img/
+stylesheets/
 .htaccess
 fire_app_log.txt
 config.rb
