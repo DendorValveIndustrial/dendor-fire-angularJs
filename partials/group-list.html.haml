@@ -39,7 +39,7 @@
               =link_to("{{item.itemName}}","#!/{{group.id}}/{{item.itemId}}")
   .span3.pull-left.left-bar.text-right
     %ul.nav.nav-list
-      %li.nav-header Produkty
+      %li.nav-header Produkcja
       %li{"ng-repeat"=>"group in groups | orderBy:orderProp"}
         =link_to("{{group.name}}","#!/{{group.id}}")
 
