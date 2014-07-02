@@ -45,3 +45,7 @@
       %li{"ng-repeat"=>"groupItem in groupList | orderBy:orderProp", "ng-class"=>"{'disabled':isActive(groupItem.id)}"}
         =link_to("{{groupItem.name}}","#!/{{groupItem.id}}")
         /.divider
+    .line.line-dotted
+    .text-center
+      .img-hover
+        =link_to(image_tag(lorem_image("180x200"), :width=>"180", :height=>"200", :alt=>"lorem_image", :class=>"img-polaroid"), "#")
