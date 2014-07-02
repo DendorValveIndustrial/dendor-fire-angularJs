@@ -1,0 +1,27 @@
+-@view = {:title=>"Armatura przemysłowa: cennik", :description=>"Armatura przemysłowa: cennik", :keywords=>"cennik"}
+-@activePrice = "active"
+.row
+  .span12
+    %ul.breadcrumb
+      %li
+        =link_to("Główna", "/", :class=>"hide-text icon-home", :title=>"Główna")
+        %span.divider="/"
+      %li.active Cennik
+.row
+  .span9.offset3
+    %h1.h1= @view[:title]
+.row
+  .span9.pull-right
+    .main-content
+      %p W tej zakładce można pobrać cennik do całego zakresu armatury przemysłowej, systemów naprawczo-połączeniowych oraz kształtek produkcji Dendor.
+      %blockquote.price-download
+        %ul.unstyled
+          %li= link_to(content_tag(:i,"",:class=>"fa fa-download")+"&nbsp;&nbsp;"+"Cennik PLN, pdf, pobrać","/price/price_pol.pdf", :target=>"_blank")
+          %li= link_to(content_tag(:i,"",:class=>"fa fa-download")+"&nbsp;&nbsp;"+"Cennik Euro, pdf, pobrać","/price/price_euro.pdf", :target=>"_blank")
+
+      %p Prosimy zwrócić uwagę na to, że cała zawartość strony ma charakter wyłącznie informacyjny. Podane informacje i ceny nie stanowią oferty w rozumieniu przepisów kodeksu cywilnego. Zastrzegamy prawo zmiany cen oraz właściwości podane w ofercie. W celu zasięgnięcia szczegółowych informacji dotyczących warunków współpracy prosimy zwracać się do działu handlowego firmy.
+
+      %p Serdecznie zachęcamy do telefonicznego bądź mailowego kontaktu z nami. Wszystkie niezbędne numery telefonów lub adresy elektroniczne są podane w zakładce #{link_to('kontakt', '/contact.html')}.
+
+  .span3.pull-left.left-bar.text-right
+    = render :partial => "/layouts/nav_productions"

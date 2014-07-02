@@ -24,7 +24,7 @@
                   %li=link_to("Aktualności","/news.html")
                   %li=link_to("Info","/info.html")
                   %li=link_to("Kontakt","/contact.html")
-                  %li=link_to("Cennik","/price.pdf", :target=>"_blank")
+                  %li=link_to("Cennik","/price.html", :target=>"_blank")
                 %ul.nav.pull-right.country
                   %li=link_to(image_tag('icons/us.gif', :width=>"16", :height=>"11", :alt=>"USA"), "http://dendor-valve.com", :title=>"USA")
                   %li=link_to(image_tag('icons/pl.gif', :width=>"16", :height=>"11", :alt=>"Poland"), "http://dendor.pl", :title=>"Poland")
@@ -49,19 +49,7 @@
           .row
             .span3
               .aside-sidebar
-                %ul.nav.nav-list{:role=>"navigation"}
-                  %li.nav-header Kategorie produktów
-                  %li= link_to "Przepustnice","productions/#!/butterfly-valves"
-                  %li= link_to "Zasuwy","productions/#!/cast-iron-valves"
-                  %li= link_to "Zawory zwrotne","productions/#!/check-valves"
-                  %li= link_to "Zawory elektromagnetyczne","productions/#!/solenoid-valves"
-                  %li= link_to "Zawory bezpieczeństwa","productions/#!/safety-valves"
-                  %li= link_to "Filtry","productions/#!/filters"
-                  %li= link_to "Kurki kulowe","productions/#!/ball-valves"
-                  %li= link_to "Napędy elektryczne","productions/#!/actuators"
-                  %li= link_to "Kompensatory","productions/#!/сompensators"
-                  %li= link_to "Kształtki","productions/#!/fittings"
-                  %li= link_to "Akcesoria","productions/#!/accessories"
+                = render :partial => "/layouts/nav_productions"
             .span9
               .row-fluid
                 .span10.offset1

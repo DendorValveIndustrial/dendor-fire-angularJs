@@ -28,7 +28,7 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 70px; }
 
-body { overflow-y: scroll; background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; }
+body { overflow-y: scroll; background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; }
 @media (max-width: 767px) { body { padding: 0; overflow-y: hidden; } }
 
 .header { margin-bottom: 10px; }
@@ -42,6 +42,7 @@ body { overflow-y: scroll; background-image: url('/img/body_bg.png?1403897853');
 .main .h1 .contact, .main .main-content .contact { margin-top: 20px; }
 .main .h1 .text-item, .main .main-content .text-item { margin: 0 0 20px; text-align: justify; }
 .main .h1 .text-item .image-text-item, .main .main-content .text-item .image-text-item { padding-left: 20px; padding-bottom: 20px; }
+.main .h1 .price-download, .main .main-content .price-download { margin-top: 20px; margin-bottom: 15px; margin-left: 30px; }
 .main .breadcrumb { background-color: transparent; margin-bottom: 10px; }
 .main .left-bar .nav > li > a { background-color: transparent; }
 .main .left-bar .nav > li > a:hover { color: #022e65; }
