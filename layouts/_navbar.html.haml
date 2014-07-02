@@ -7,7 +7,7 @@
           %li{:class=>@activeCatalog}=link_to("Oferta","/productions/")
           %li{:class=>@activeNews}=link_to("Aktualności","/news.html")
           %li{:class=>@activeInfo}=link_to("Info","/info.html")
+          %li{:class=>@activePrice}=link_to("Cennik","/price.html")
           %li{:class=>@activeContact}=link_to("Kontakt","/contact.html")
-          %li=link_to("Cennik","/price.html", :target=>"_blank")
         %form.navbar-search.pull-right{:metod=>"get", :action=>"/search.html"}
           %input{:type=>"text", :class=>"search-query", :placeholder=>"Search", :name=>"q"}
