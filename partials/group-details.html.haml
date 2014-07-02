@@ -44,7 +44,7 @@
       %li.nav-header Produkcja
       %li{"ng-repeat"=>"groupItem in groupList | orderBy:orderProp", "ng-class"=>"{'disabled':isActive(groupItem.id)}"}
         =link_to("{{groupItem.name}}","#!/{{groupItem.id}}")
-        /.divider
+  /
     .line.line-dotted
     .text-center
       .img-hover
