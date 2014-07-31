@@ -28,10 +28,10 @@ html, body { height: 100%; }
 
 .footer { clear: both; position: relative; height: 70px; }
 
-body { background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; }
+body { background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; }
 @media (max-width: 767px) { body { padding: 0; } }
 
-.header { height: 450px; background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; background-color: #393185; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; margin-bottom: 45px; }
+.header { height: 450px; background-image: url('/img/body_bg.png?1391258070'); background-position: top center; background-repeat: no-repeat; background-color: #393185; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px; margin-bottom: 45px; }
 .header .navbar .country > li > a { padding: 12.5px 6px 12.5px; }
 .header .head { margin-top: 65px; }
 .header .head .logo { margin: 30px 0; }
@@ -75,6 +75,8 @@ body { background-image: url('/img/body_bg.png?1403897853'); background-position
 .main .aside-sidebar .nav-list > li > a { padding: 10px 17px; color: inherit; }
 .main .home-title h2 { font-family: Impact, sans-serif; font-weight: normal; text-shadow: rgba(0, 0, 0, 0.2) 3px 3px 4px; line-height: 40px; margin-bottom: 30px; color: #393185; max-width: 500px; }
 .main .home-title .about { margin-bottom: 40px; margin-left: 50px; font-size: 16px; }
+.main .home-title .about > p:last-child { margin-top: 30px; }
+.main .home-title .about > p .capital-letter { font-size: 120%; font-weight: bold; }
 .main .home-title blockquote { margin-bottom: 40px; }
 .main .home-title blockquote > p { color: #999; line-height: 1.5; }
 

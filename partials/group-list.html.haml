@@ -38,7 +38,7 @@
         %h2.group-head {{group.name}}
         .group-image.pull-left
           %a{:href=>"#!/{{group.id}}"}
-            %img{"ng-src"=>"{{group.image}}"}
+            %img{"ng-src"=>"{{group.image}}", :alt=>"{{group.name}}"}
         .group-items.pull-left
           %ul.list-items.checkarrow
             %li{"ng-repeat"=>"item in group.groupItems"}

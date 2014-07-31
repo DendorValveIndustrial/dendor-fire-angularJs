@@ -22,7 +22,7 @@
           .span4
             .item-image.img-hover.text-center
               %a{:href=>"#!/{{group.path}}/{{item.itemId}}"}
-                %img{"ng-src"=>"{{item.imageUrl}}"}
+                %img{"ng-src"=>"{{item.imageUrl}}", :alt=>"{{item.itemName}} {{item.itemType}}"}
           .span7.offset1
             .main-features-item
               %p

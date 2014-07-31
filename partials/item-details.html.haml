@@ -21,7 +21,7 @@
         .row-fluid.details-item-top
           .span4
             .item-image.text-center
-              %img{"ng-src"=>"{{item.imageUrl}}"}
+              %img{"ng-src"=>"{{item.imageUrl}}", :alt=>"{{item.itemName}}"}
           .span7.offset1
             .main-features-item
               %p{"ng-hide"=>"!item.property.dn"}
