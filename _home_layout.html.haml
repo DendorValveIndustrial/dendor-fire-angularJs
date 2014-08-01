@@ -31,14 +31,19 @@
                   %li=link_to(image_tag('icons/ru.gif', :width=>"16", :height=>"11", :alt=>"Rosja"), "http://dendor.ru", :title=>"Rosja")
         .container
           .row.head
-            .span3
+            .span3{:itemscope=>'itemscope', :itemtype=>"http://schema.org/Organization"}
+              %meta{:itemprop=>"name", :content=>"Dendor Valve Industrial  Sp. z o.o."}
               .logo= image_tag('logo/logo-wite270.png', :width=>"269", :height=>"82", :alt=>"Dendor Valve Industrial")
               .contact-top.text-center{:role=>"contentinfo"}
-                .address ul. Romualda Traugutta 29 #{tag("br")} 80-221 Gdańsk
-                .tel 48-585-237-560
+                .address{:itemprop=>"address", :itemscope=>"itemscope", :itemtype=>"http://schema.org/PostalAddress"}
+                  %span{:itemprop=>"streetAddress"} ul. Jaśkowa Dolina 81
+                  =tag("br")
+                  %span{:itemprop=>"postalCode"}= " 80-286"
+                  %span{:itemprop=>"addressLocality"}= " Gdańsk, Polska"
+                .tel{:itemprop=>"telephone"} 48-585-237-560
                 .email
                   %i.icon-envelope.icon-white
-                  = mail_to "info@dendor.pl"
+                  = mail_to("info@dendor.pl","info@dendor.pl",:itemprop=>"email")
             .span9
               .wrap-slider
                 %h1.pull-left Armatura przemysłowa
@@ -55,18 +60,19 @@
                 .span10.offset1
                   .home-title
                     = yield
-              .line.line-dotted
-              .row-fluid
-                .span6
-                  %h2.h1 Aktualności
-                  %p Firma Dendor Valve Industrial była wystawcą na ХХII Międzynarodowych Targach Maszyn i Urządzeń dla Wodociągów i Kanalizacji WOD-KAN 2014 w Bydgoszczy (Polska). Przedstawiony przez spółkę szeroki asortyment armatury przemysłowej dla przemysłu i gospodarki komunalnej wzbudzał żywe zainteresowanie licznych odwiedzających...
-                  %p.text-right= link_to("czytaj więcej...", "#")
-                .span6
-                  %ul.thumbnails
-                    -2.times do
-                      %li.span5.offset1
-                        .thumbnail.text-center
-                          =link_to(image_tag(lorem_image("180x180"), :width=>"180", :height=>"180", :alt=>"lorem_image"), "#")
+              /
+                .line.line-dotted
+                .row-fluid
+                  .span6
+                    %h2.h1 Aktualności
+                    %p Firma Dendor Valve Industrial była wystawcą na ХХII Międzynarodowych Targach Maszyn i Urządzeń dla Wodociągów i Kanalizacji WOD-KAN 2014 w Bydgoszczy (Polska). Przedstawiony przez spółkę szeroki asortyment armatury przemysłowej dla przemysłu i gospodarki komunalnej wzbudzał żywe zainteresowanie licznych odwiedzających...
+                    %p.text-right= link_to("czytaj więcej...", "#")
+                  .span6
+                    %ul.thumbnails
+                      -2.times do
+                        %li.span5.offset1
+                          .thumbnail.text-center
+                            =link_to(image_tag(lorem_image("180x180"), :width=>"180", :height=>"180", :alt=>"lorem_image"), "#")
               .line.line-dotted
               .row-fluid
                 .span4
