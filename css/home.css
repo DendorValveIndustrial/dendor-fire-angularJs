@@ -84,3 +84,10 @@ body { background-image: url('/img/body_bg.png?1391258070'); background-position
 
 .footer { background-color: #EBECEC; color: #868383; font-size: 12px; /* margin: 40px 0 0; */ padding: 0; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; box-shadow: rgba(0, 0, 0, 0.3) 0 6px 8px -4px inset; }
 .footer .container { padding-top: 30px; }
+
+.modal { width: 600px; margin-left: -300px; padding: 5px; border-radius: 0; }
+.modal .wrap { margin: 0; border: 1px solid #eee; }
+.modal .wrap .modal-header .modal-label { font-size: 24px; font-weight: normal; color: #9D9D00; margin: 15px 0; line-height: 20px; }
+.modal .wrap .modal-header .close { margin-top: 12px; }
+.modal .wrap .modal-body { padding: 30px 20px; }
+.modal.fade.in { top: 25%; }

@@ -57,13 +57,7 @@
                 = render :partial => "/layouts/nav_productions"
             .span9
               .row-fluid
-                .span12
                 .span10.offset1
-                  .well.well-large
-                    %h2.h1 Promocja świąteczno-noworoczna 2014/2015.
-                    %p= content_tag(:span, "Szanowni Państwo", :class=>"lead") + tag("br") + "w okresie świąteczno-noworocznym firma DENDOR VALVE INDUSTRIAL wprowadza WYJĄTKOWE CENY na określony asortyment swoich wyrobów. Oferta obejmuje armaturę przemysłową WOD/KAN/CO z żeliwa sferoidalnego i jest ważna do wyczerpania zapasów magazynowych."
-                    %p.text-right= link_to("Sprawdź...", "#", :class=>"btn btn-danger btn-large")
-
                   .home-title
                     = yield
               /
@@ -95,6 +89,7 @@
       .container
         .row
           = render :partial => "/layouts/footer"
+    = render :partial => "/layouts/home_action_modal"
     = javascript_include_tag "/lib/headjs/head.min"
     = render :partial => "/layouts/headjs_home"
     = render :partial => "/layouts/google_analytics"

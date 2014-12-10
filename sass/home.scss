@@ -240,3 +240,35 @@ body{
     padding-top: 30px;
   }
 }
+.modal{
+  width: 600px;
+  margin-left: -300px;
+  padding: 5px;
+  border-radius: 0;
+  .wrap{
+    margin: 0;
+    border: 1px solid #eee;
+    .modal-header{
+      .modal-label{
+        font:{
+          size: 24px;
+          weight: normal;
+        }
+        color: #9D9D00;
+        margin: 15px 0;
+        line-height: 20px;
+      }
+      .close{
+        margin-top: 12px;
+      }
+    }
+    .modal-body{
+      padding: 30px 20px;
+    }
+  }
+  &.fade{
+    &.in{
+      top: 25%;
+    }
+  }
+}
