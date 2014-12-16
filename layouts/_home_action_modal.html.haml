@@ -1,10 +1,10 @@
-.modal.hide.fade#actions{:tabindex => "-1", :role => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+.modal.hide.fade.text-center#actions{:tabindex => "-1", :role => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
   .wrap
     .modal-header
       %button.close{:type => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}="&#x2715;"
       %h3.modal-label#myModalLabel Promocja świąteczno-noworoczna 2014/2015
     .modal-body
-      %p.lead Szanowni Państwo
+      %p.lead.h1 Szanowni Państwo
       %p w okresie świąteczno-noworocznym firma DENDOR VALVE INDUSTRIAL wprowadza WYJĄTKOWE CENY na określony asortyment swoich wyrobów. Oferta obejmuje armaturę przemysłową WOD/KAN/CO z żeliwa sferoidalnego i jest ważna do wyczerpania zapasów magazynowych.
     .modal-footer
       = link_to("Sprawdź...", "/price/price_actions.pdf", :class=>"btn btn-danger btn-large", :target => "_blank")

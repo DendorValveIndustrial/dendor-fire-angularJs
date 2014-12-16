@@ -251,12 +251,14 @@ body{
     .modal-header{
       .modal-label{
         font:{
-          size: 24px;
-          weight: normal;
+          size: 20px; //13px;
         }
-        color: #9D9D00;
+        color: #da4e49;//#999;
         margin: 15px 0;
         line-height: 20px;
+        text:{
+          transform: uppercase;
+        }
       }
       .close{
         margin-top: 12px;
@@ -264,6 +266,9 @@ body{
     }
     .modal-body{
       padding: 30px 20px;
+    }
+    .modal-footer{
+      text-align: center;
     }
   }
   &.fade{
