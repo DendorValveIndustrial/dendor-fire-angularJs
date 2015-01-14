@@ -94,7 +94,7 @@
     %ul.nav.nav-list
       %li.nav-header {{group.name}}
       %li{"ng-repeat"=>"item in group.groupItems", "ng-class"=>"{'disabled':isActive(item.itemId)}"}
-        =link_to("{{item.itemName}}","#!/{{group.path}}/{{item.itemId}}")
+        =link_to("{{item.itemName}} {{item.itemType}}","#!/{{group.path}}/{{item.itemId}}")
         .divider
   /
     .text-center
