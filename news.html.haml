@@ -14,6 +14,11 @@
   .span9.pull-right
     .main-content
       %section
+        %h2.h2= link_to 'XIX Międzynarodowe Targi Aqua-Therm Moscow 2015', "/news/exhibition-aqua-term-moscow-2015.html"
+        %p W dniach 3-6 lutego 2015 odbędą się XIX Międzynarodowe Targi Aqua-Therm Moscow w Centrum Wystawienniczym (МVC) „Кrokus Ekspo” w Moskwie...
+        %p.text-right= link_to "czytaj więcej...", "/news/exhibition-aqua-term-moscow-2015.html", :class=>"btn btn-link"
+      .line.line-dotted
+      %section
         %h2.h2= link_to 'Międzynarodowe Targi "EKWATEK 2014" w Moskwie', "/news/exhibition-in-moscow.html"
         %p Dendor Valve Industrial wzięła udział w Międzynarodowych Targach Wodnych Technologii „EKWATEK 2014” w dniach 03-06 czerwca 2014r. w ramach 11-go Międzynarodowego Forum EKWATEK w Moskwie...
         %p.text-right= link_to "czytaj więcej...", "/news/exhibition-in-moscow.html", :class=>"btn btn-link"
@@ -32,6 +37,7 @@
   .span3.pull-left.left-bar.text-right
     %ul.nav.nav-list
       %li.nav-header= @view[:title]
+      %li= link_to "Międzynarodowe Targi Aqua-Therm Moscow 2015", "/news/exhibition-aqua-term-moscow-2015.html"
       %li= link_to "Międzynarodowe Targi EKWATEK 2014", "/news/exhibition-in-moscow.html"
       %li= link_to "Targi WOD-KAN 20-22 maja 2014 r.", "/news/exhibition-in-poland.html"
       %li= link_to "Międzynarodowe Targi Aqua-Therm 2014", "/news/exhibition-in-spb.html"
