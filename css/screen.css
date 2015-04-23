@@ -23,10 +23,10 @@ textarea { resize: vertical; }
 
 html, body { height: 100%; }
 
-.layout { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -70px; }
-.layout .layout-footer { height: 70px; }
+.layout { clear: both; min-height: 100%; height: auto !important; height: 100%; margin-bottom: -170px; }
+.layout .layout-footer { height: 170px; }
 
-.footer { clear: both; position: relative; height: 70px; }
+.footer { clear: both; position: relative; height: 170px; }
 
 body { overflow-y: scroll; background-image: url('/img/body_bg.png?1403897853'); background-position: top center; background-repeat: no-repeat; }
 @media (max-width: 767px) { body { padding: 0; overflow-y: hidden; } }

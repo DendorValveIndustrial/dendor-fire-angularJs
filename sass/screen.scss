@@ -1,5 +1,5 @@
 @import "base";
-@include sticky-footer(70px, ".layout", ".layout-footer", ".footer");
+@include sticky-footer(170px, ".layout", ".layout-footer", ".footer");
 
 body{
   overflow-y: scroll;
